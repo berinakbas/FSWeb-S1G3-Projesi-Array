@@ -40,10 +40,12 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
+function kopyala(dizi){
   /*kod buraya*/
+  const copy=[...dizi];
+  return copy;
 }
-
+console.log("Gorev:1 " + kopyala(orijinalTatlar));
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -56,10 +58,15 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
+function dizi25Cesitmi(dizi){
   /*kod buraya*/
+  if(dizi.lenght===25){
+    return true;
+  }else{
+    return false;
+  }
 }
-
+console.log("Görev 2 : " +dizi25Cesitmi(orijinalTatlar));
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -74,10 +81,12 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
+function cesitEkle(dizi,yenicesit){
   /*kod buraya*/
+  dizi.unshift(yenicesit);
+  return dizi;
 }
-
+console.log("Görev 3: " + cesitEkle(orijinalTatlar," Kakule"));
 
 /* Cörev 4:
 
@@ -92,10 +101,12 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
+function sonCesitiKaldir(dizi){
   /*kod buraya*/
+  dizi.pop()
+  return dizi;
 }
-
+console.log("Görev 4 :" + sonCesitiKaldir(orijinalTatlar));
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -108,10 +119,11 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
+function indekstekiCesitiGetir(dizi,index){
   /*kod buraya*/
+  return dizi[index]
 }
-
+console.log("Görev 5 : " + indekstekiCesitiGetir(orijinalTatlar,[5]));
 
 /* Görev 6:
 
@@ -128,10 +140,12 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
+function ismeGoreCesitCikar(dizi,lezzet){
   /*kod buraya*/
+  dizi.splice()
+  return dizi;
 }
-
+console.log("Görev 6 : " + ismeGoreCesitCikar(orijinalTatlar,"Tarçın"));
 
 /* Görev 7:
 
@@ -251,4 +265,3 @@ module.exports = {
   ortalamaKelimeSayisi,
   rastgeleTatlar
 }
-
